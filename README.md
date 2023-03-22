@@ -1,2 +1,2 @@
-# -python-poetry
-python-poetry
+# python-poetry
+Python with poetry preinstalled
