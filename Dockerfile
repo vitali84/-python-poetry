@@ -1,8 +1,8 @@
 FROM python:3.11
-#install rust, needed for armv7 architecture
-RUN apt update && apt install -y rustc && rm -rf /var/lib/apt/lists/*
 
+ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
+RUN pip install cryptography==3.4.6
 # install poetry
-RUN curl -sSL https://install.python-poetry.org | python3 -
+RUN pip install poetry
 
 ENV PATH="/root/.local/bin:$PATH"
